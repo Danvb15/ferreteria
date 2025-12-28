@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería El Tornillo - Herramientas y Materiales de Calidad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+</head>
+<body>
+    <!-- Header y navegación -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +1 (555) 123-4567</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</span>
+                    <span><i class="fas fa-clock"></i> Lunes a Sábado: 8:00 AM - 8:00 PM</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <i class="fas fa-tools"></i>
+                    <h1>Ferretería <span>El Tornillo</span></h1>
+                </div>
+                
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="#productos"><i class="fas fa-toolbox"></i> Productos</a></li>
+                        <li><a href="#servicios"><i class="fas fa-concierge-bell"></i> Servicios</a></li>
+                        <li><a href="#nosotros"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+                        <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+                        <li class="cart-icon" id="cartIcon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrito de compras -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Carrito de Compras</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Los productos del carrito se agregarán aquí -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cartTotal">$0.00</span></p>
+            <button class="btn btn-primary" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Todo para tu hogar y construcción</h1>
+            <p>Encuentra herramientas, materiales, equipos de seguridad y todo lo que necesitas para tus proyectos.</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Busca herramientas, materiales, equipos...">
+                <button class="btn btn-primary" id="searchBtn"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+            <a href="#productos" class="btn btn-secondary">Ver productos destacados</a>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="featured-products" id="productos">
+        <div class="container">
+            <h2><i class="fas fa-star"></i> Productos Destacados</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargarán con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="categories">
+        <div class="container">
+            <h2><i class="fas fa-list"></i> Nuestras Categorías</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Herramientas Manuales</h3>
+                    <p>Martillos, destornilladores, llaves, alicates y más.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Herramientas Eléctricas</h3>
+                    <p>Taladros, sierras, lijadoras, pulidoras y accesorios.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Pinturas y Accesorios</h3>
+                    <p>Pinturas, brochas, rodillos, cintas y protectores.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-hard-hat"></i>
+                    <h3>Equipo de Seguridad</h3>
+                    <p>Cascos, guantes, lentes, protectores auditivos.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Ferretería General</h3>
+                    <p>Tornillos, clavos, cerraduras, bisagras y herrajes.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Fontanería</h3>
+                    <p>Tuberías, válvulas, llaves, conectores y accesorios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2><i class="fas fa-concierge-bell"></i> Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Corte de Materiales</h3>
+                    <p>Corte de madera, metal y plástico a la medida que necesites.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-key"></i>
+                    <h3>Duplicado de Llaves</h3>
+                    <p>Duplicamos todo tipo de llaves con rapidez y precisión.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Envío a Domicilio</h3>
+                    <p>Llevamos tus compras a tu casa u obra sin costo adicional.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Asesoría Técnica</h3>
+                    <p>Te asesoramos en la selección de materiales y herramientas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2><i class="fas fa-info-circle"></i> Sobre Ferretería El Tornillo</h2>
+                    <p>Con más de 25 años de experiencia, somos la ferretería de confianza en la comunidad. Ofrecemos una amplia variedad de herramientas, materiales de construcción, equipo de seguridad y todo lo necesario para tus proyectos de hogar, bricolaje o construcción.</p>
+                    <p>Nuestro compromiso es brindar productos de calidad, asesoría experta y un servicio excepcional a cada uno de nuestros clientes.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>25+</h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Productos Disponibles</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Clientes Satisfechos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Interior de ferretería">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2><i class="fas fa-envelope"></i> Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Centro, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@ferreteriaeltornillo.com</p>
+                    <p><i class="fas fa-clock"></i> Horario de atención:</p>
+                    <p>Lunes a Viernes: 8:00 AM - 8:00 PM</p>
+                    <p>Sábados: 8:00 AM - 6:00 PM</p>
+                    <p>Domingos: 9:00 AM - 2:00 PM</p>
+                    
+                    <div class="map">
+                        <h3>Ubicación</h3>
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Mapa interactivo de nuestra ubicación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="phone" placeholder="Tu teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" required>
+                                <option value="" disabled selected>Selecciona un asunto</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="producto">Información de producto</option>
+                                <option value="servicio">Información de servicio</option>
+                                <option value="cotizacion">Solicitud de cotización</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-tools"></i>
+                        <h3>Ferretería <span>El Tornillo</span></h3>
+                    </div>
+                    <p>Tu proveedor de confianza para herramientas, materiales y equipo de construcción.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#">Herramientas Manuales</a></li>
+                        <li><a href="#">Herramientas Eléctricas</a></li>
+                        <li><a href="#">Pinturas y Accesorios</a></li>
+                        <li><a href="#">Equipo de Seguridad</a></li>
+                        <li><a href="#">Fontanería</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suscríbete</h4>
+                    <p>Recibe ofertas exclusivas y novedades en tu correo.</p>
+                    <div class="newsletter">
+                        <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico">
+                        <button class="btn btn-primary" id="subscribeBtn">Suscribirse</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ferretería El Tornillo. Todos los derechos reservados.</p>
+                <p>Desarrollado con <i class="fas fa-heart"></i> para amantes del bricolaje</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
